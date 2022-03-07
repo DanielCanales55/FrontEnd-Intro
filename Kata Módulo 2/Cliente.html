@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+            name="description"
+            content="Title: PastelerX. Description: Sabor eXqusito"
+        />
+        <title>PastelerX</title>
+
+        <link rel="stylesheet" href="./src/css/style.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+    
+            /* Estilo de header */
+            header {
+                background-color: #613D74;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+    
+            /* Crear 2 columnas con la misma posición en la fila */
+            nav {
+                float: left;
+                width: 30%;
+                height: 300px;
+                /* only for demonstration, should be removed */
+                background: #ccc;
+                padding: 20px;
+            }
+    
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+    
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #AF83C6;
+                height: 400px;
+            }
+    
+            /* Clear floats after the columns */
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+    
+            /* Estilo de footer */
+            footer {
+                background-color: #A63BDE;
+                padding: 10px;
+                text-align: center;
+                color: white;
+                width: auto;
+            }
+    
+            /* Responsive layout */
+            @media (max-width: 600px) {
+    
+                nav,
+                article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <img
+                src="./assets/imgs/PastelerX.png"
+                alt="Logo PastelerX"
+                class="logo"
+                style="height: 300px; width: 300px;"
+            />
+
+            <div class="texto-encabezado">
+                <h1>PastelerX - Pastelería</h1>
+                <p>Sabor eXqusito.</p>
+            </div>
+
+        </header>
+
+        <!-- El cliente de la pastelería necesita ver los diferentes sabores de pasteles, así como los precios de cada uno. -->
+        <section>
+            <h2>Sabores disponibles</h2>
+            <table>
+                <thead>
+                    <td><b>Sabor</b></td>
+                    <td><b>Costo (20 personas)</b></td>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Red Velvet</td>
+                        <td>$300.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Chocolate</td>
+                        <td>$300.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Vainilla</td>
+                        <td>$250.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Café Mocha</td>
+                        <td>$280.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Zanahoria</td>
+                        <td>$220.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Elote</td>
+                        <td>$220.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+        <!-- El cliente de la pastelería necesita ver los diferentes adornos con los que se puede decorar el pastel y los precios de cada uno. -->
+        <section>
+            <h2>Adornos disponibles</h2>
+            <table>
+                <thead>
+                    <td><b>Adorno</b></td>
+                    <td><b>Precio</b></td>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Fondant</td>
+                        <td>$100.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Sprinkles</td>
+                        <td>$50.00</td>
+                    </tr>
+
+                    <tr>
+                        <td>Velitas</td>
+                        <td>$80.00</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+
+<!-- El cliente de la pastelería necesita poner en un formulario su pedido. -->
+<article>
+    <h2>¡Creat tu pastel!</h2>
+<form action="./ordenes.html">
+    <h3>Ingresa tus datos</h3>
+
+    <!-- El formulario debe de contener los datos de contacto del cliente que son Nombre, Teléfono, Correo Electrónico, Descripción general del pastel y la selección de sabores y adornos. -->
+    <label for="nombreCliente">Nombre: </label>
+    <input
+        type="text"
+        id="nombreCliente"
+        name="nombreCliente"
+        placeholder="Tu nombre completo"
+        required
+    />
+
+    <br />
+
+    <label for="telefonoCliente">Número de celular: </label>
+    <input
+        type="tel"
+        id="telefonoCliente"
+        name="telefonoCliente"
+        placeholder="Tu número de teléfono"
+        required
+    />
+
+    <br />
+
+    <label for="correoCliente">Correo electrónico: </label>
+    <input
+        type="email"
+        id="correoCliente"
+        name="correoCliente"
+        placeholder="Tu correo electrónico"
+        required
+    />
+
+    <br />
+    <label for="direccionCliente">Dirección: </label>
+    <input
+        type="text"
+        id="direccionCliente"
+        name="direccionCliente"
+        placeholder="Tu dirección"
+        required
+    />
+
+    <br /><br />
+    <h4>Datos del pastel</h4>
+
+    <p>Selecciona el/los sabor(es) de tu pastel:</p>
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborRedVelvet"
+        id="saborRedVelvet"
+    />
+    <label for="saborRedVelvet">RedVelvet</label>
+
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborChocolate"
+        id="saborChocolate"
+    />
+    <label for="saborChocolate">Chocolate</label>
+
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborVainilla"
+        id="saborVainilla"
+    />
+    <label for="saborVainilla">Vainilla</label>
+
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborCafé"
+        id="saborCafé"
+    />
+    <label for="saborCafé">Café Mocha</label>
+
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborZanahoria"
+        id="saborZanahoria"
+    />
+    <label for="saborZanahoria">Zanahoria</label>
+
+    <input
+        type="checkbox"
+        name="sabor"
+        value="saborQElote"
+        id="saborElote"
+    />
+    <label for="saborElote">Elote</label>
+
+    <!-- El cliente de la pastelería tendrá la posibilidad de combinar adornos dependiendo de sus preferencias. -->
+     <h5><p>Selecciona el/los adorno(s) para tu pastel:</p></h5>
+        <input
+            type="checkbox"
+            name="adorno"
+            value="adornoFondant"
+            id="adornoFondant"
+        />
+        <label for="adornoFondant">Fondant</label>
+    
+        <input
+            type="checkbox"
+            name="adorno"
+            value="adornoSprinkles"
+            id="adornoSprinkles"
+        />
+        <label for="adornoSprinkles">Sprinkles</label>
+    
+        <input
+            type="checkbox"
+            name="adorno"
+            value="adornoVelitas"
+            id="adornoVelitas"
+        />
+        <label for="adornoVelitas">Velitas</label>
+    
+    
+        <br /><br />
+
+    <label for="descripcionPastel"
+        >Descripción general del pastel: </label
+    ><br />
+    <textarea
+        rows="5"
+        cols="35"
+        id="descripcionPastel"
+        name="descripcionPastel"
+        placeholder="Escribe una descripción general de cómo quieres tu pastel, incluyendo la cantidad de personas para las que lo deseas y detalles adicionales en caso de ser necesarios."
+    ></textarea>
+
+    <br /><br />
+
+    <button type="submit">Enviar</button>
+
+</form>
+    <footer>
+        <h2>Contáctanos:</h2>
+            <p>Dirección: 5 de Mayo Col. Centro, León, Guanajuato.</p>
+            <p>Teléfono: 24775896325</p>
+            <p>Horario: Lunes - Viernes: 11:00-19:00
+                <br>Sábado y Domingo: 12:00 - 14:00
+            </p>
+    </footer>
+</article>
+
+
+
+    </body>
+    </html>
